@@ -1,8 +1,6 @@
 
 type alimento = "manzana" | "pollo" | "veneno" | "golosina"
-
-
-class tamagochi {
+class tamagotchi {
     nombre: string
     hambre: number = 50
     energia: number = 50
@@ -31,10 +29,7 @@ class tamagochi {
 
     dormir(): void {
         if (!this.verificarEstado()) return;
-
-        console.log(`${this.nombre} está tomando una siesta reparadora...`);
-
-        
+         console.log(`${this.nombre} está tomando una siesta reparadora...`);
         this.energia += 30; // de energía al dormir
         this.hambre += 10;  // aumenta el hambre por el tiempo
 
@@ -90,4 +85,4 @@ class tamagochi {
         }
     }
 
-} export { tamagochi }
+} export { tamagotchi }

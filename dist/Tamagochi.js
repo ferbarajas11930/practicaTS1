@@ -23,15 +23,11 @@ class tamagochi {
         }
     }
     dormir() {
-        if (!this.verificarEstado)
+        if (!this.verificarEstado())
             return;
-        if (this.energia < 20) {
-            console.log(`${this.nombre} esta muy cansado, no ho ho ho dan xd`);
-            return;
-        }
-        console.log(`${this.nombre} esta felizmente sin ir a la Uni, digo, jugando...`);
-        this.hambre += 15;
-        this.energia -= 20;
+        console.log(`${this.nombre} está tomando una siesta reparadora...`);
+        this.energia += 30; // de energía al dormir
+        this.hambre += 10; // aumenta el hambre por el tiempo
         this.actualizarEstado();
     }
     jugar() {
@@ -44,7 +40,7 @@ class tamagochi {
         console.log(`${this.nombre} esta jugando apasionadamente :D`);
         this.hambre += 15;
         this.energia -= 20;
-        this.actualizarEstado;
+        this.actualizarEstado();
     }
     mostrarEstado() {
         console.log(`===========El estado de ${this.nombre}===========`);
@@ -64,7 +60,7 @@ class tamagochi {
         this.hambre = Math.max(0, Math.min(100, this.hambre));
         this.energia = Math.max(0, Math.min(100, this.energia));
         if (this.hambre >= 80) {
-            this.estadoAnimo = "triste";
+            this.estadoAnimo = "hambriento";
         }
         else if (this.energia < 20) {
             this.estadoAnimo = "cansado";

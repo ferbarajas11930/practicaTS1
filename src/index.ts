@@ -1,8 +1,8 @@
-import { tamagochi } from "./Tamagochi.js"
+import { tamagotchi } from "./Tamagochi.js"
 
 
 
-const mascota = new tamagochi("Lilo")
+const mascota = new tamagotchi("Lilo")
 
 mascota.mostrarEstado()
 mascota.jugar()
